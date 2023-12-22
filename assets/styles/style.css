@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-inner {
+    padding-bottom: 1.25rem;
+    background-color: #A6E3E9;
+    text-align: center;
+}
+
+.header-inner h1 {
+    font-size: 2.25rem;
+}
+
+.header-inner h2 {
+    font-size: 1.25rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #72c1c5;
+    padding: 1.5rem 7%;
+    position: sticky;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.container nav {
+    margin: 0 1rem;
+    width: 100%;
+}
+
+.container ul {
+    display: flex;
+}
+
+.container li {
+    text-align: center;
+    padding: 14px 16px;
+    list-style-type: none;
+}
+
+.container nav a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.container li:hover {
+    background-color: #71C9CE;
+}
+
+.container li:hover a {
+    color: white;
+    /* font-weight: bold; */
+}
+
+.container .icon {
+    background-image: url(image/icon-menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+main {
+    display: flex;
+    background-color: #CBF1F5;
+}
+
+.content {
+    width: 75%;
+    /* border: 1px solid red; */
+}
+
+.content .introduction {
+    min-height: 100vh;
+    align-items: center;
+    padding: 1.25rem;
+    display: flex;
+    /* float: left; */
+    background-color: #a5d6eb;
+}
+
+.content .introduction section {
+    text-align: left;
+}
+
+.content .introduction section h1,
+.content .introduction section p {
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.content .introduction section h1 {
+    font-size: 3rem;
+}
+
+.content .introduction section p {
+    font-size: 1.5rem;
+}
+
+.content .introduction section .button {
+    background-color: #0EA5E9;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.content .introduction section a {
+    text-decoration: none;
+    color: white;
+}
+
+.content .introduction section a.button:hover {
+    background-color: #E3FDFD;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.30);
+}
+
+.content .introduction section a.button:hover {
+    color: black;
+}
+
+.content .introduction figure {
+    margin: auto;
+}
+
+.content .introduction figure img {
+    border: 3px solid #008CBA;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #CBF1F5;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.30);
+}
+
+.main-content {
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-color: #71C9CE;
+    /* border: 5px solid black; */
+}
+
+.main-content h1 {
+    padding: 1.25rem;
+    font-size: 2.25rem;
+}
+
+.main-content .box-container {
+    display: flex;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.main-content .box-container .box {
+    flex-grow: 1;
+}
+
+.main-content .box-container .box img {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+aside {
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #CBF1F5;
+    /* border: 1px solid red; */
+    float: right;
+    width: 25%;
+    /* background-color: whitesmoke; */
+    font-family: 'Inter', sans-serif;
+}
+
+aside h1 {
+    padding: 1.25rem;
+    font-size: 2.25rem;
+}
+
+aside .profile-card {
+    border-radius: 10px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+aside .profile-card .header-content {
+    padding: 10px;
+    background-color: #0ea5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+aside .profile-card .header-content figcaption {
+    text-align: center;
+    color: white;
+}
+
+aside .profile-card .header-content figcaption h2 {
+    font-weight: 600;
+}
+
+aside .profile-card .header-content figcaption h3 {
+    font-weight: 400;
+}
+
+aside .profile-card .header-content .location {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 5px;
+}
+
+aside .profile-card .header-content .location i {
+    font-size: 1.5rem;
+}
+
+aside .profile-card .header-content .location h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+aside .profile-card .main {
+    padding-top: 1rem;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+aside .profile-card .main .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+aside .profile-card .main .buttons .email {
+    margin: 5px;
+    padding: 5px;
+    height: 100%;
+    background-color: #F5F5F5;
+    color: #0F172A;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.30);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+aside .profile-card .main .buttons .email i {
+    font-size: 1.5rem;
+}
+
+aside .profile-card .main .buttons .email h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+aside .profile-card .main .buttons .linkedin {
+    margin: 5px;
+    padding: 5px;
+    height: 100%;
+    background-color: #0EA5E9;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.30);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+aside .profile-card .main .buttons .linkedin i {
+    font-size: 1.5rem;
+}
+
+aside .profile-card .main .buttons .linkedin h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+aside .profile-card .bio {
+    padding: 1.25rem;
+    width: 100%;
+    text-align: justify;
+    color: #0F172A;
+}
+
+aside .profile-card .bio h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+aside .profile-card .bio p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+aside .profile-card .social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+aside .profile-card .social a {
+    font-size: 1.5rem;
+    color: #0F172A;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #A6E3E9;
+    padding: 5px;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+
+    main {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    aside {
+        width: 80%;
+        float: none;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .content .main-content .box-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    html {
+        font-size: 10px;
+    }
+
+    .container .icon{
+        display: inline-block;
+    }
+
+    .container nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 30rem;
+        height: calc(100vh - 10rem);
+        display: none;
+        /* visibility: hidden; */
+    }
+
+    .container nav ul {
+        background-color: #72c1c5;
+    }
+
+    .container nav.active{
+        right: 0;
+        display: block;
+    }
+
+    header nav a{
+        display: block;
+        margin: 0.5rem;
+        /* padding: 0.5rem; */
+        /* font-size: 2rem; */
+    }
+
+    .content .introduction {
+        display: block;
+        padding-top: 80px;
+    }
+
+    .content .introduction figure {
+        padding-top: 50px;
+    }
+}
