@@ -19,11 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu");
   const closeBtn = document.querySelector(".close-btn");
-  const menuLinks = document.querySelectorAll(".menu a");
+  const menuLinks = document.querySelectorAll(".menu > a");
+  const dropdownLinks = document.querySelectorAll(".dropdown-content > a");
+  const dropdownContent = document.querySelector(".dropdown-content");
 
   menuToggle.addEventListener("click", function () {
     menu.classList.toggle("active");
     closeBtn.classList.toggle("active");
+    dropdownContent.classList.remove("active");
   });
 
   closeBtn.addEventListener("click", function () {
@@ -38,6 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  dropdownLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      menu.classList.remove("active");
+      closeBtn.classList.remove("active");
+    });
+  });
+
   document.addEventListener("click", function (event) {
     const isClickInsideMenu = menu.contains(event.target);
     const isClickOnToggle = menuToggle.contains(event.target);
@@ -46,6 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.classList.remove("active");
       closeBtn.classList.remove("active");
     }
+  });
+
+  const dropdownBtn = document.querySelector(".dropbtn");
+
+  dropdownBtn.addEventListener("click", function () {
+    dropdownContent.classList.toggle("active");
   });
 
   const perpustakaanContainer = document.querySelector(".perpustakaan");
@@ -229,8 +245,21 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   dataPerpustakaan.forEach((kategoriData) => {
+    const dropdownItem = document.createElement("a");
+    dropdownItem.href = `#${kategoriData.kategori}`;
+    dropdownItem.textContent = kategoriData.kategori;
+    dropdownItem.addEventListener("click", function () {
+      menu.classList.remove("active");
+      closeBtn.classList.remove("active");
+      dropdownContent.classList.remove("active");
+    });
+    dropdownContent.appendChild(dropdownItem);
+  });
+
+  dataPerpustakaan.forEach((kategoriData) => {
     const kategoriArticle = document.createElement("article");
     kategoriArticle.classList.add("kategori");
+    kategoriArticle.id = kategoriData.kategori;
 
     const kategoriHeading = document.createElement("h2");
     kategoriHeading.textContent = kategoriData.kategori;

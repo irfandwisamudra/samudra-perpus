@@ -87,7 +87,7 @@ nav {
 .menu a {
   font-weight: 600;
   color: black;
-  margin: 0 2rem;
+  padding: 0 2rem;
 }
 
 .menu a:hover {
@@ -117,6 +117,36 @@ nav {
 
 .close-btn:hover {
   color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+}
+
+.dropdown-content a:hover {
+  background-color: #72c1c5;
+  color: white;
+}
+
+.dropdown-content.active {
+  display: block;
 }
 
 main {
@@ -418,7 +448,6 @@ footer > .container {
   justify-content: space-between;
   padding: 1rem 0;
 }
-
 
 .copyright {
   display: flex;
