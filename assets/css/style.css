@@ -115,11 +115,19 @@ nav {
   color: white;
 }
 
+main {
+  display: flex;
+}
+
+#content {
+  padding: 0 5%;
+}
+
 .introduction {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 0;
+  padding: 3rem 0;
 }
 
 .introduction section {
@@ -181,7 +189,7 @@ nav {
 }
 
 .perpustakaan h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
@@ -196,7 +204,7 @@ nav {
 }
 
 .perpustakaan .kategori h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid rgb(221, 221, 221);
 }
@@ -236,6 +244,167 @@ nav {
   margin: 0 1rem 1rem;
 }
 
+#about {
+  text-align: center;
+  padding: 3rem 5%;
+  float: right;
+  width: 40%;
+  font-family: "Inter", sans-serif;
+}
+
+#about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  border-radius: 10px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card .header-content {
+  padding: 1rem;
+  background-color: #0ea5e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-card .header-content figure img {
+  border-radius: 50%;
+}
+
+.profile-card .header-content figcaption {
+  text-align: center;
+  color: white;
+}
+
+.profile-card .header-content figcaption h2 {
+  font-weight: 600;
+}
+
+.profile-card .header-content figcaption h3 {
+  font-weight: 400;
+}
+
+.profile-card .header-content .location {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 5px;
+}
+
+.profile-card .header-content .location i {
+  font-size: 1.5rem;
+}
+
+.profile-card .header-content .location h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.profile-card .main {
+  padding-top: 1rem;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-card .main .buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile-card .main .buttons .email {
+  margin: 5px;
+  padding: 5px;
+  height: 100%;
+  background-color: #f5f5f5;
+  color: #0f172a;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.3);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-card .main .buttons .email i {
+  font-size: 1.5rem;
+}
+
+.profile-card .main .buttons .email h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.profile-card .main .buttons .linkedin {
+  margin: 5px;
+  padding: 5px;
+  height: 100%;
+  background-color: #0ea5e9;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.3);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-card .main .buttons .linkedin i {
+  font-size: 1.5rem;
+}
+
+.profile-card .main .buttons .linkedin h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.profile-card .bio {
+  padding: 1.25rem;
+  width: 100%;
+  text-align: justify;
+  color: #0f172a;
+}
+
+.profile-card .bio h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.profile-card .bio p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.profile-card .social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.profile-card .social a {
+  font-size: 1.5rem;
+  color: #0f172a;
+  text-decoration: none;
+}
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (max-width: 1400px) {
@@ -259,6 +428,27 @@ nav {
 
   .container {
     max-width: 720px;
+  }
+
+  main {
+    display: block;
+  }
+
+  #content {
+    width: 100%;
+    padding: 0;
+  }
+
+  #about {
+    width: 100%;
+  }
+
+  #about > .container {
+    text-align: -webkit-center;
+  }
+
+  .profile-card {
+    width: 50%;
   }
 }
 
@@ -292,6 +482,10 @@ nav {
   }
 
   .container {
+    padding: 0 5%;
+  }
+
+  #content {
     padding: 0 5%;
   }
 
@@ -346,5 +540,9 @@ nav {
 
   .perpustakaan .kategori .book-container .buku {
     width: calc(100% - 20px);
+  }
+
+  .profile-card {
+    width: 75%;
   }
 }
