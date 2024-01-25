@@ -52,6 +52,10 @@ body {
   height: 100%;
 }
 
+.header-inner .jumbotron {
+  color: black;
+}
+
 .header-inner .jumbotron img {
   height: 20rem;
 }
@@ -247,7 +251,6 @@ main {
 #about {
   text-align: center;
   padding: 3rem 5%;
-  float: right;
   width: 40%;
   font-family: "Inter", sans-serif;
 }
@@ -406,6 +409,54 @@ main {
   text-decoration: none;
 }
 
+footer {
+  background-color: #cbf1f5;
+}
+
+footer > .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+
+.copyright {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: center;
+}
+
+.copyright {
+  height: 5rem;
+}
+
+.copyright img {
+  height: 100%;
+}
+
+.copyright p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #004aad;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 15rem;
+}
+
+.links a {
+  font-size: 2rem;
+  color: black;
+}
+
+.links a:hover {
+  color: #004aad;
+}
+
 /* X-Large devices (large desktops, 1200px and up) */
 @media (max-width: 1400px) {
   .container {
@@ -544,5 +595,19 @@ main {
 
   .profile-card {
     width: 75%;
+  }
+
+  footer > .container {
+    display: block;
+  }
+
+  .copyright {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .links {
+    justify-content: center;
+    gap: 2rem;
   }
 }
