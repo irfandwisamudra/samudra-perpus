@@ -41,3 +41,29 @@ header .header-inner .slider .slide {
   filter: blur(1px);
   height: 100%;
 }
+
+header .header-inner .jumbotron img {
+  height: 20rem;
+}
+
+/* Large devices (desktops, 992px and up to 1200px) */
+@media (max-width: 1200px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+}
+
+/* Extra-Small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+}
