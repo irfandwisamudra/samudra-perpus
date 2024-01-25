@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: aliceblue;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -79,7 +83,7 @@ nav {
 .menu a {
   font-weight: 600;
   color: black;
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 .menu a:hover {
@@ -170,6 +174,68 @@ nav {
   background-color: #cbf1f5;
   box-shadow: 0 4px 6px rgba(14, 165, 233, 0.3);
 }
+.perpustakaan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perpustakaan h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.perpustakaan .kategori {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.perpustakaan .kategori h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.perpustakaan .kategori .book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.perpustakaan .kategori .book-container .buku {
+  width: calc(30% - 2rem);
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perpustakaan .kategori .book-container .buku:hover {
+  transform: scale(1.05);
+}
+
+.perpustakaan .kategori .book-container .buku img {
+  max-width: 50%;
+  height: auto;
+}
+
+.perpustakaan .kategori .book-container .buku h3 {
+  border-top: 1px solid #ddd;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.perpustakaan .kategori .book-container .buku p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+}
+
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (max-width: 1400px) {
@@ -212,6 +278,10 @@ nav {
 
   .introduction figure {
     width: 50%;
+  }
+
+  .perpustakaan .kategori .book-container .buku {
+    width: calc(50% - 20px);
   }
 }
 
@@ -272,5 +342,9 @@ nav {
 
   .introduction figure {
     width: 80%;
+  }
+
+  .perpustakaan .kategori .book-container .buku {
+    width: calc(100% - 20px);
   }
 }
