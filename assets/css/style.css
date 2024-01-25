@@ -111,6 +111,66 @@ nav {
   color: white;
 }
 
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.introduction section {
+  width: 60%;
+  padding-right: 3rem;
+}
+
+.introduction section h1 {
+  font-size: 3rem;
+}
+
+.introduction section p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.introduction section .button {
+  background-color: #0ea5e9;
+  border: 2px solid #008cba;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.introduction section a {
+  color: white;
+}
+
+.introduction section a.button:hover {
+  background-color: #e3fdfd;
+  border: 2px solid #008cba;
+  border-radius: 5px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.3);
+  color: black;
+}
+
+.introduction figure {
+  width: 40%;
+  margin: 2rem 0;
+}
+
+.introduction figure img {
+  width: 100%;
+  border: 0.2rem solid #008cba;
+  border-radius: 2rem 0.5rem;
+  background-color: #cbf1f5;
+  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.3);
+}
+
 /* X-Large devices (large desktops, 1200px and up) */
 @media (max-width: 1400px) {
   .container {
@@ -141,6 +201,18 @@ nav {
   .container {
     max-width: 540px;
   }
+
+  .introduction {
+    flex-wrap: wrap;
+  }
+  .introduction section {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .introduction figure {
+    width: 50%;
+  }
 }
 
 /* Extra-Small devices (portrait phones, less than 576px) */
@@ -150,12 +222,7 @@ nav {
   }
 
   .container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .navbar-container {
-    width: 90%;
+    padding: 0 5%;
   }
 
   .menu {
@@ -201,5 +268,9 @@ nav {
   .close-btn.active {
     display: block;
     opacity: 1;
+  }
+
+  .introduction figure {
+    width: 80%;
   }
 }
