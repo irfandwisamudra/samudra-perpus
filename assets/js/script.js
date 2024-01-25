@@ -16,6 +16,23 @@ function carousel() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header-inner");
+  const navbar = document.querySelector("nav");
+  const main = document.querySelector("main");
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > header.offsetHeight) {
+      navbar.classList.add("fixed");
+      main.style.marginTop = navbar.offsetHeight + "px";
+    } else {
+      navbar.classList.remove("fixed");
+      main.style.marginTop = "0";
+    }
+    main.style.transition = "margin-top 0s";
+  });
+
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu");
   const closeBtn = document.querySelector(".close-btn");
@@ -243,6 +260,17 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
   ];
+
+  document.addEventListener("click", function (event) {
+    const isClickInsideDropdown = dropdownContent.contains(event.target);
+    const isClickOnDropdownToggle = document
+      .querySelector(".dropbtn")
+      .contains(event.target);
+
+    if (!isClickInsideDropdown && !isClickOnDropdownToggle) {
+      dropdownContent.classList.remove("active");
+    }
+  });
 
   dataPerpustakaan.forEach((kategoriData) => {
     const dropdownItem = document.createElement("a");
