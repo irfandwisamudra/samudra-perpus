@@ -70,6 +70,7 @@ nav.fixed {
   width: 100%;
   z-index: 1;
   background-color: rgba(114, 193, 197, 0.8);
+  backdrop-filter: blur(2px);
 }
 
 .navbar-container {
@@ -79,7 +80,7 @@ nav.fixed {
 }
 
 .navbar-container .logo {
-  height: 8rem;
+  height: 7rem;
 }
 
 .navbar-container .logo img {
@@ -99,7 +100,7 @@ nav.fixed {
 }
 
 .menu a:hover {
-  color: #004aad;
+  color: white;
 }
 
 .menu .dropdown .dropbtn {
@@ -114,7 +115,7 @@ nav.fixed {
 }
 
 .menu-toggle:hover {
-  color: #004aad;
+  color: white;
 }
 
 .close-btn {
@@ -128,7 +129,7 @@ nav.fixed {
 }
 
 .close-btn:hover {
-  color: #004aad;
+  color: white;
 }
 
 .dropdown {
@@ -154,7 +155,7 @@ nav.fixed {
 
 .dropdown-content a:hover {
   background-color: #72c1c5;
-  color: #004aad;
+  color: white;
 }
 
 .dropdown-content.active {
@@ -173,7 +174,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 0;
+  padding: 7rem 0;
 }
 
 .introduction section {
@@ -232,6 +233,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 0;
 }
 
 .perpustakaan h1 {
@@ -239,9 +241,11 @@ main {
   margin-bottom: 2rem;
 }
 
+.perpustakaan .kategori-box {
+  padding: 2rem 0;
+}
 .perpustakaan .kategori {
   width: 100%;
-  margin-bottom: 2rem;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
@@ -261,13 +265,15 @@ main {
   justify-content: space-around;
 }
 
-.perpustakaan .kategori .book-container .buku {
+.perpustakaan .kategori .book-container a {
   width: calc(30% - 2rem);
   margin-bottom: 2rem;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  color: black;
 }
 
 .perpustakaan .kategori .book-container .buku:hover {
@@ -277,22 +283,21 @@ main {
 .perpustakaan .kategori .book-container .buku img {
   max-width: 50%;
   height: auto;
+  margin-bottom: 0.5rem;
 }
 
 .perpustakaan .kategori .book-container .buku h3 {
   border-top: 1px solid #ddd;
   font-size: 1.5rem;
-  padding: 1rem;
 }
 
 .perpustakaan .kategori .book-container .buku p {
   font-size: 1rem;
-  margin: 0 1rem 1rem;
 }
 
 #about {
   text-align: center;
-  padding: 3rem 5%;
+  padding: 4rem 5% 2rem 2.5%;
   width: 40%;
   font-family: "Inter", sans-serif;
 }
@@ -510,17 +515,6 @@ footer > .container {
   .container {
     max-width: 960px;
   }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 992px) {
-  html {
-    font-size: 55%;
-  }
-
-  .container {
-    max-width: 720px;
-  }
 
   main {
     display: block;
@@ -533,10 +527,26 @@ footer > .container {
 
   #about {
     width: 100%;
+    padding: 2rem 0 4rem;
   }
 
   #about > .container {
     text-align: -webkit-center;
+  }
+
+  .profile-card {
+    width: 40%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    max-width: 720px;
   }
 
   .profile-card {
@@ -562,7 +572,7 @@ footer > .container {
     width: 50%;
   }
 
-  .perpustakaan .kategori .book-container .buku {
+  .perpustakaan .kategori .book-container a {
     width: calc(50% - 20px);
   }
 }
@@ -578,7 +588,7 @@ footer > .container {
   }
 
   #content {
-    padding: 0 5%;
+    padding: 0 2.5% 0 5%;
   }
 
   .menu {
@@ -590,12 +600,12 @@ footer > .container {
     right: -100%;
     width: 50%;
     height: 100vh;
-    background-color: rgba(114, 193, 197, 0.8);
-    backdrop-filter: blur(2px);
+    background-color: rgba(114, 193, 197, 1);
     transition: right 0.3s ease;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    z-index: 1;
   }
 
   .menu.active {
@@ -619,6 +629,7 @@ footer > .container {
     cursor: pointer;
     color: black;
     font-size: 2rem;
+    z-index: 1;
   }
 
   .close-btn.active {
@@ -630,8 +641,12 @@ footer > .container {
     width: 80%;
   }
 
-  .perpustakaan .kategori .book-container .buku {
+  .perpustakaan .kategori .book-container a {
     width: calc(100% - 20px);
+  }
+
+  .perpustakaan .kategori .book-container .buku img {
+    max-width: 30%;
   }
 
   .profile-card {

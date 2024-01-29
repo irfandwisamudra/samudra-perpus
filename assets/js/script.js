@@ -19,18 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header-inner");
   const navbar = document.querySelector("nav");
   const main = document.querySelector("main");
+  let lastScrollTop = 0;
 
   window.addEventListener("scroll", function () {
     const scrollPosition = window.scrollY;
 
     if (scrollPosition > header.offsetHeight) {
-      navbar.classList.add("fixed");
-      main.style.marginTop = navbar.offsetHeight + "px";
+      if (scrollPosition > lastScrollTop && scrollPosition > navbar.offsetHeight) {
+        navbar.classList.remove("fixed");
+        main.style.marginTop = "0";
+      } else {
+        navbar.classList.add("fixed");
+        main.style.marginTop = navbar.offsetHeight + "px";
+      }
     } else {
       navbar.classList.remove("fixed");
       main.style.marginTop = "0";
     }
     main.style.transition = "margin-top 0s";
+    lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
   });
 
   const menuToggle = document.querySelector(".menu-toggle");
@@ -91,31 +98,31 @@ document.addEventListener("DOMContentLoaded", function () {
           judul: "Harry Potter and the Sorcerer's Stone",
           penulis: "J.K. Rowling",
           tahun: 1997,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "To Kill a Mockingbird",
           penulis: "Harper Lee",
           tahun: 1960,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "1984",
           penulis: "George Orwell",
           tahun: 1949,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Pride and Prejudice",
           penulis: "Jane Austen",
           tahun: 1813,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Great Gatsby",
           penulis: "F. Scott Fitzgerald",
           tahun: 1925,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
       ],
     },
@@ -126,31 +133,31 @@ document.addEventListener("DOMContentLoaded", function () {
           judul: "Sapiens: A Brief History of Humankind",
           penulis: "Yuval Noah Harari",
           tahun: 2014,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Educated",
           penulis: "Tara Westover",
           tahun: 2018,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Immortal Life of Henrietta Lacks",
           penulis: "Rebecca Skloot",
           tahun: 2010,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Becoming",
           penulis: "Michelle Obama",
           tahun: 2018,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Wright Brothers",
           penulis: "David McCullough",
           tahun: 2015,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
       ],
     },
@@ -161,31 +168,31 @@ document.addEventListener("DOMContentLoaded", function () {
           judul: "The Hobbit",
           penulis: "J.R.R. Tolkien",
           tahun: 1937,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Chronicles of Narnia",
           penulis: "C.S. Lewis",
           tahun: 1950,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "A Game of Thrones",
           penulis: "George R.R. Martin",
           tahun: 1996,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Name of the Wind",
           penulis: "Patrick Rothfuss",
           tahun: 2007,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Mistborn: The Final Empire",
           penulis: "Brandon Sanderson",
           tahun: 2006,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
       ],
     },
@@ -196,31 +203,31 @@ document.addEventListener("DOMContentLoaded", function () {
           judul: "Pride and Prejudice",
           penulis: "Jane Austen",
           tahun: 1813,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Romeo and Juliet",
           penulis: "William Shakespeare",
           tahun: 1597,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Fault in Our Stars",
           penulis: "John Green",
           tahun: 2012,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Me Before You",
           penulis: "Jojo Moyes",
           tahun: 2012,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "P.S. I Love You",
           penulis: "Cecelia Ahern",
           tahun: 2004,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
       ],
     },
@@ -231,31 +238,31 @@ document.addEventListener("DOMContentLoaded", function () {
           judul: "The Girl with the Dragon Tattoo",
           penulis: "Stieg Larsson",
           tahun: 2005,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Gone Girl",
           penulis: "Gillian Flynn",
           tahun: 2012,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "The Da Vinci Code",
           penulis: "Dan Brown",
           tahun: 2003,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Sherlock Holmes",
           penulis: "Arthur Conan Doyle",
           tahun: 1887,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
         {
           judul: "Big Little Lies",
           penulis: "Liane Moriarty",
           tahun: 2014,
-          gambar: "assets/img/book.png",
+          gambar: "assets/img/book-cover.png",
         },
       ],
     },
@@ -285,9 +292,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   dataPerpustakaan.forEach((kategoriData) => {
+    const kategoriBox = document.createElement("div");
+    kategoriBox.classList.add("kategori-box");
+    kategoriBox.id = kategoriData.kategori;
+
     const kategoriArticle = document.createElement("article");
     kategoriArticle.classList.add("kategori");
-    kategoriArticle.id = kategoriData.kategori;
 
     const kategoriHeading = document.createElement("h2");
     kategoriHeading.textContent = kategoriData.kategori;
@@ -300,6 +310,9 @@ document.addEventListener("DOMContentLoaded", function () {
     kategoriArticle.appendChild(bookContainer);
 
     kategoriData.buku.forEach((bukuData) => {
+      const linkImage = document.createElement("a");
+      linkImage.href = "#";
+
       const bukuArticle = document.createElement("article");
       bukuArticle.classList.add("buku");
 
@@ -321,9 +334,12 @@ document.addEventListener("DOMContentLoaded", function () {
       bukuArticle.appendChild(bukuAuthor);
       bukuArticle.appendChild(bukuYear);
 
-      bookContainer.appendChild(bukuArticle);
+      linkImage.appendChild(bukuArticle);
+      bookContainer.appendChild(linkImage);
+
+      kategoriBox.appendChild(kategoriArticle);
     });
 
-    perpustakaanContainer.appendChild(kategoriArticle);
+    perpustakaanContainer.appendChild(kategoriBox);
   });
 });
